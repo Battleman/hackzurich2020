@@ -44,5 +44,9 @@ def create_app(test_config=None):
     @app.route('/login')
     def login():
         return render_template('login.html')
+        
+    @app.route('/bounties')
+    def bounties():
+        return render_template('bounties.html')
 
     return app
