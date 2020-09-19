@@ -3,9 +3,9 @@ import os
 from flask import Flask
 import functools
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for
+    render_template, request, session, url_for,
 )
-
+from .webcam_demo import webcam
 
 def create_app(test_config=None):
     # create and configure the app
@@ -44,7 +44,7 @@ def create_app(test_config=None):
     @app.route('/login')
     def login():
         return render_template('login.html')
-        
+
     @app.route('/bounties')
     def bounties():
         return render_template('bounties.html')
@@ -63,6 +63,8 @@ def create_app(test_config=None):
 
     @app.route('/bounty')
     def bounty():
+        bounty_num = request.args.get("bounty")
+        webcam()
         return render_template('bounty.html')
 
     return app

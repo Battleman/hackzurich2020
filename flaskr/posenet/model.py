@@ -1,6 +1,6 @@
 import tensorflow as tf
 import os
-import posenet.converter.config
+from .converter import config
 
 MODEL_DIR = './_models'
 DEBUG_OUTPUT = False
@@ -20,7 +20,7 @@ def model_id_to_ord(model_id):
 
 
 def load_config(model_ord):
-    converter_cfg = posenet.converter.config.load_config()
+    converter_cfg = config.load_config()
     checkpoints = converter_cfg['checkpoints']
     output_stride = converter_cfg['outputStride']
     checkpoint_name = checkpoints[model_ord]
