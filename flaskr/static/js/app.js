@@ -1,7 +1,7 @@
 $(function() {
 
     // Read Profile Info
-    $.getJSON("./dataset/user.json", function(data) {
+    $.getJSON("/static/dataset/user.json", function(data) {
         console.log(JSON.stringify(data));
         $('#username').text(data.username);
         $('#profession').text(data.profession);
