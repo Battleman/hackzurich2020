@@ -1,7 +1,7 @@
 $(function() {
 
     // Read User Info to show the bounties
-    $.getJSON("./dataset/user.json", function(data) {
+    $.getJSON("/static/dataset/user.json", function(data) {
         console.log(JSON.stringify(data));
         $('#category').text(data.category);
     }).fail(function() {
@@ -9,7 +9,7 @@ $(function() {
     });
 
     // Read User Info to show the bounties
-    $.getJSON("./dataset/bounties.json", function(data) {
+    $.getJSON("/static/dataset/bounties.json", function(data) {
         console.log(data.length);
         $.each(data, function(key, val) {
             if (val.category === $('#category').text()) {
