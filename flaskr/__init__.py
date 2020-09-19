@@ -45,4 +45,8 @@ def create_app(test_config=None):
     def bounties():
         return render_template('bounties.html')
 
+    @app.route('/dashboard')
+    def dashboard():
+        return render_template('dashboard.html')
+
     return app
