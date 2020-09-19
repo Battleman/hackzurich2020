@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Sign up Survey</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/static/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css"> -->
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css"> -->
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css"> -->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css"> -->
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/vendor/noui/nouislider.min.css"> -->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
-<!--===============================================================================================-->
-</head>
-<body>
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
+	<link rel="stylesheet" href="/static/css/dashboard.css">
 
+	<style>
+		form input.input100 {
+			font-size: 18px;
+			color: #555555;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="vertical-nav bg-white text-left" id="sidebar">
+		<div class="py-4 px-3 mb-4 bg-light">
+			<div class="media d-flex align-items-center"><img src="static/images/avatar_index.png" alt="..." width="65"
+					class="mr-3 rounded-circle img-thumbnail shadow-sm">
+				<div class="media-body">
+					<h4 class="m-0">Username</h4>
+					<p class="font-weight-light text-muted mb-0">Profession</p>
+					<p class="font-weight-light text-muted mb-0">Email</p>
+				</div>
+			</div>
+		</div>
+
+		<p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Get Healthy</p>
+
+		<ul class="nav flex-column bg-white mb-0">
+			<li class="nav-item">
+				<a href="./dashboard" class="nav-link text-dark font-italic bg-light">
+					<i class="fa fa-th-large mr-3 text-primary fa-fw"></i> Dashboard
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="./bounties" class="nav-link text-dark font-italic">
+					<i class="fa fa-cubes mr-3 text-primary fa-fw"></i> Bounties
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="./about" class="nav-link text-dark font-italic">
+					<i class="fa fa-address-card mr-3 text-primary fa-fw"></i> About
+				</a>
+			</li>
+		</ul>
+	</div>
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" action="/signup" method="POST">
+			<form class="contact100-form validate-form" action="/dashboard" method="GET">
 				<span class="contact100-form-title">
 					Create an Alter Account
 				</span>
@@ -35,9 +86,10 @@
 					<input class="input100" type="text" name="name" placeholder="Enter Your Name">
 				</div>
 
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100"
+					data-validate="Enter Your Email (e@a.x)">
 					<span class="label-input100">Email *</span>
-					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
+					<input class="input100" type="text" style="font-size: 18px; color: #555555;" name="email" placeholder="Enter Your Email ">
 				</div>
 
 				<div class="wrap-input100 validate-input input100-select bg1 rs1-wrap-input100">
@@ -54,7 +106,8 @@
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter height (in cm)">
 					<span class="label-input100">Height *</span>
-					<input class="input100" type="number" name="height" min="50" max="280" multiple="1" placeholder="Heignt (cm)">
+					<input class="input100" type="number" name="height" min="50" max="280" multiple="1"
+						placeholder="Heignt (cm)">
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter weight (in Kg)">
@@ -83,7 +136,8 @@
 						<span class="label-input100">At which occasion(s)?</span>
 
 						<div class="contact100-form-radio m-t-15">
-							<input class="input-radio100" id="radio1" type="radio" name="type-product" value="physical" checked="checked">
+							<input class="input-radio100" id="radio1" type="radio" name="type-product" value="physical"
+								checked="checked">
 							<label class="label-radio100" for="radio1">
 								Work (e.g. construction worker, fireman,...)
 							</label>
@@ -138,29 +192,28 @@
 
 
 
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="/static/vendor/jquery/jquery-3.5.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<!-- <script src="/static/vendor/animsition/js/animsition.min.js"></script> -->
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="/static/vendor/bootstrap/js/popper.js"></script>
 	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="/static/vendor/select2/select2.min.js"></script>
 	<script>
-		$(".js-select2").each(function(){
+		$(".js-select2").each(function () {
 			$(this).select2({
 				minimumResultsForSearch: 20,
 				dropdownParent: $(this).next('.dropDownSelect2')
 			});
 
 
-			$(".js-select2").each(function(){
-				$(this).on('select2:close', function (e){
-					if($(this).val() == "Please chooses") {
+			$(".js-select2").each(function () {
+				$(this).on('select2:close', function (e) {
+					if ($(this).val() == "Please chooses") {
 						$('.js-show-service').slideUp();
-					}
-					else {
+					} else {
 						$('.js-show-service').slideUp();
 						$('.js-show-service').slideDown();
 					}
@@ -168,14 +221,14 @@
 			});
 		})
 	</script>
-<!--===============================================================================================-->
-	<script src="/static/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="/static/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<!-- <script src="/static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script> -->
+	<!--===============================================================================================-->
+	<!-- <script src="/static/vendor/countdowntime/countdowntime.js"></script> -->
+	<!--===============================================================================================-->
 	<!-- <script src="/static/vendor/noui/nouislider.min.js"></script> -->
-	<script>
+	<!-- <script>
 	    var filterBar = document.getElementById('filter-bar');
 
 	    noUiSlider.create(filterBar, {
@@ -197,18 +250,11 @@
 	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
 	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
 	    });
-	</script>
-<!--===============================================================================================-->
+	</script> -->
+	<!--===============================================================================================-->
 	<script src="/static/js/main.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
 
 </body>
+
 </html>

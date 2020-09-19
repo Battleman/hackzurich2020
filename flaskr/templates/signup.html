@@ -19,13 +19,12 @@
 </head>
 
 <body>
-    <!--/body> class="bg text-center"-->
+<!--/body> class="bg text-center"-->
 
     <!-- Start Vertical navbar -->
     <div class="vertical-nav bg-white text-left" id="sidebar">
         <div class="py-4 px-3 mb-4 bg-light">
-            <div class="media d-flex align-items-center"><img src="static/images/avatar_index.png" alt="..." width="65"
-                    class="mr-3 rounded-circle img-thumbnail shadow-sm">
+            <div class="media d-flex align-items-center"><img src="static/images/avatar_index.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
                 <div class="media-body">
                     <h4 class="m-0">Username</h4>
                     <p class="font-weight-light text-muted mb-0">Profession</p>
@@ -58,25 +57,38 @@
 
 
 
-    <!-- Page content holder -->
-    <div class="page-content p-5" id="content">
-        <!-- Toggle button -->
-        <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i
-                class="fa fa-bars mr-2"></i><small id="toggleText" class="text-uppercase font-weight-bold">Toggle
-                NavBar</small></button>
+<!-- Page content holder -->
+<div class="page-content p-5" id="content">
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small id="toggleText" class="text-uppercase font-weight-bold">Toggle NavBar</small></button>
 
-        <!-- Start Dashboard content -->
-        <div class="top-header">
-            <h1 class="m-0 pt-4 pb-1 text-white" style="line-height: 100% !important;">GetHealthy</h1>
-        </div>
-
-        <h1 style="margin-top: 3em; font-size: 4.5rem" > G &nbsp; E &nbsp; T &nbsp; . &nbsp; H &nbsp; E &nbsp; A &nbsp; L &nbsp; T &nbsp; H
-            &nbsp; Y</h1>
-        <p>Claim Bounties and Your Health</p>
-        <button class="btn btn-light bg-white rounded-pill px-4 mb-4" onclick='window.location.href="/survey"'>Signup</button>
-
+    <!-- Start Dashboard content -->
+    <div class="top-header">
+        <h1 class="m-0 pt-4 pb-1 text-white" style="line-height: 100% !important;">GetHealthy</h1>
     </div>
-    <!-- End Dashboard content -->
+
+    <div class="centered" style="padding-top: 50px;">
+        <form action="./dashboard">
+            <!-- <p class="firstLine"> G &nbsp; E &nbsp; T &nbsp; . &nbsp; H &nbsp; E &nbsp; A &nbsp; L &nbsp; T &nbsp; H -->
+                <!-- &nbsp; Y</p> -->
+            <p class="secondLine">Claim Bounties and Your Health</p>
+            <p><input class="InputStyle" placeholder="Name" style="font-family:Arial, FontAwesome" type="text"></p>
+            <p><input class="InputStyle" placeholder="Email" style="font-family:Arial, FontAwesome" type="text"></p>
+            <p><input class="InputStyle" placeholder="Profession" style="font-family:Arial, FontAwesome" type="text">
+            </p>
+            <p><input class="InputStyle" placeholder="Age" style="font-family:Arial, FontAwesome" type="number"></p>
+            <p><select class="InputStyle" placeholder="Category" style="font-family:Arial, FontAwesome" type="text">
+                    <option>Select an Option</option>
+                    <option value="lig1">Low Income Group</option>
+                    <option value="mig1">Mid Income Group</option>
+                    <option value="hig1">High Income Group</option>
+                </select></p>
+            <p><input class="InputStyle" value="Continue" style="font-family:Arial, FontAwesome" type="submit"></p>
+        </form>
+    </div>
+
+</div>
+<!-- End Dashboard content -->
 
 </body>
 

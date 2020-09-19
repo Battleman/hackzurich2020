@@ -7,6 +7,7 @@ from flask import (
 )
 from .webcam_demo import webcam
 
+
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -63,8 +64,7 @@ def create_app(test_config=None):
 
     @app.route('/bounty')
     def bounty():
-        bounty_num = request.args.get("bounty")
-        webcam()
-        return render_template('bounty.html')
+        success = webcam()
+        return render_template('bounty.html', {"success": success})
 
     return app

@@ -1,7 +1,8 @@
 import tensorflow as tf
 import cv2
 import time
-from .posenet import load_model, read_cap, decode_multi, draw_skel_and_kp
+import math
+from .posenet import load_model, read_cap, decode_multi, draw_skel_and_kp, PART_NAMES
 # import argparse
 
 # parser = argparse.ArgumentParser()
@@ -106,7 +107,7 @@ def webcam():
 
         start = time.time()
         frame_count = 0
-
+        time_counter = 1
         while True:
             input_image, display_image, output_scale = read_cap(
                 cap, scale_factor=0.7125, output_stride=output_stride)
@@ -129,27 +130,27 @@ def webcam():
             overlay_image = draw_skel_and_kp(
                 display_image, pose_scores, keypoint_scores, keypoint_coords,
                 min_pose_score=0.01, min_part_score=0.1)
-             i = 0
+            i = 0
             for pi in range(len(pose_scores)):
                 if pose_scores[pi] == 0.:
                     break
                 for ki, (s, c) in enumerate(zip(keypoint_scores[pi, :], keypoint_coords[pi, :, :])):
                     #print('Keypoint %s, score = %f, coord = %s' % (posenet.PART_NAMES[ki], s, c))
-                    
+
                     #Checks for Sit Ups/Crunches
-                    knee_joint = posenet.PART_NAMES[7] 
+                    knee_joint = PART_NAMES[7]
                     rightKnee_x = c[0]
                     rightKnee_y = c[1]
 
-                    elbow_joint = posenet.PART_NAMES[13]
+                    elbow_joint = PART_NAMES[13]
                     rightElbow_x = c[0]
                     rightElbow_y = c[1]
-                    
-                    shoulder_joint = posenet.PART_NAMES[6]
+
+                    shoulder_joint = PART_NAMES[6]
                     rightShoulder_x = c[0]
                     rightShoulder_y = c[1]
-                    
-                    ankle_joint = posenet.PART_NAMES[16]
+
+                    ankle_joint = PART_NAMES[16]
                     rightAnkle_x = c[0]
                     rightAnkle_y = c[1]
 
@@ -166,24 +167,28 @@ def webcam():
                 big_toe_pose_task = "done"
             else:
                 big_toe_pose_task = "not completed"
-            
+
             time_counter = time_counter+1
 
             #Adding helpful instructions for the user
-            font = cv2.FONT_HERSHEY_SIMPLEX 
-        
-            # Use putText() method for 
-            # inserting text on video 
+            font = cv2.FONT_HERSHEY_SIMPLEX
+
+            # Use putText() method for
+            # inserting text on video
             cv2.putText(overlay_image, 'Press Q when finised', (50, 50), font, 1, (255, 0, 0), 2, cv2.LINE_4)
             cv2.putText(overlay_image, 'Timer: '+str(time_counter), (50, 100), font, 1, (255, 0, 0), 2, cv2.LINE_4)
             cv2.putText(overlay_image, 'Big Toe Pose '+str(big_toe_pose_task), (50, 200), font, 1, (255, 0, 0), 2, cv2.LINE_4)
             cv2.putText(overlay_image, 'Chair Pose '+str(chair_pose_task), (50, 250), font, 1, (255, 0, 0), 2, cv2.LINE_4)
-            
+
 
             cv2.imshow('posenet', overlay_image)
             frame_count += 1
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+                cap.release()
+                return True
+            if cv2.waitKey(1) & 0xFF == ord('p'):
+                cap.release()
+                return False
         print('Average FPS: ', frame_count / (time.time() - start))
 
 

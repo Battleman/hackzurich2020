@@ -2,25 +2,25 @@
 
         "id": 1,
         "title": "Squats",
-        "content": "Perform 10 squats to redeem the rewards.",
-        "rewards": "5 HP",
-        "category": "lig1",
+        "content": "Hold a full plank during 20 seconds.",
+        "rewards": "2 CHF",
+        "category": "silver",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
         "id": 2,
         "title": "Squats",
-        "content": "Perform 10 squats to redeem the rewards.",
-        "rewards": "5 HP",
-        "category": "lig1",
+        "content": "Perform 5 sit-ups",
+        "rewards": "Migros coupon: 5% on Milk",
+        "category": "silver",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
         "id": 3,
         "title": "Squats",
-        "content": "Perform 10 squats to redeem the rewards.",
-        "rewards": "5 HP",
-        "category": "lig1",
+        "content": "Perform 5 squats.",
+        "rewards": "CSS coupon: next bill on the house",
+        "category": "silver",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
@@ -28,7 +28,7 @@
         "title": "Squats",
         "content": "Perform 10 squats to redeem the rewards.",
         "rewards": "5 HP",
-        "category": "mig1",
+        "category": "gold",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
@@ -36,7 +36,7 @@
         "title": "Squats",
         "content": "Perform 10 squats to redeem the rewards.",
         "rewards": "5 HP",
-        "category": "mig1",
+        "category": "gold",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
@@ -44,7 +44,7 @@
         "title": "Squats",
         "content": "Perform 10 squats to redeem the rewards.",
         "rewards": "5 HP",
-        "category": "mig1",
+        "category": "gold",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
@@ -52,7 +52,7 @@
         "title": "Squats",
         "content": "Perform 10 squats to redeem the rewards.",
         "rewards": "5 HP",
-        "category": "hig1",
+        "category": "platinum",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
@@ -60,7 +60,7 @@
         "title": "Squats",
         "content": "Perform 10 squats to redeem the rewards.",
         "rewards": "5 HP",
-        "category": "hig1",
+        "category": "platinum",
         "picture": "https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     }
 ]
