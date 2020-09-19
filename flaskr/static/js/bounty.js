@@ -4,7 +4,7 @@ $(function() {
     let bountyID = urlParams.get('bounty');
 
     // Get Bounty Info
-    $.getJSON("./dataset/bounties.json", function(data) {
+    $.getJSON("/static/dataset/bounties.json", function(data) {
         console.log(JSON.stringify(data[bountyID - 1]));
         let bounty = data[bountyID - 1];
         $('#bountyID').text(bounty.id);

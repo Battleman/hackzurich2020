@@ -2,7 +2,7 @@
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background: url(../../assets/image/background.png) no-repeat center center fixed;
+    background: url(/static/images/background.png) no-repeat center center fixed;
     background-size: 100% 100%;
     background-position: top center
 }
