@@ -57,4 +57,8 @@ def create_app(test_config=None):
     def about():
         return render_template('about.html')
 
+    @app.route('/addBounty')
+    def add_bounty():
+        return render_template('addBounty.html')
+
     return app
