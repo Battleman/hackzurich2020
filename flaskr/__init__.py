@@ -1,6 +1,10 @@
 import os
 
 from flask import Flask
+import functools
+from flask import (
+    Blueprint, flash, g, redirect, render_template, request, session, url_for
+)
 
 
 def create_app(test_config=None):
@@ -27,10 +31,14 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/')
     def index():
-        return 'Index Page!'
+        return render_template('index.html')
 
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    @app.route('/survey')
+    def survey():
+        return render_template('survey.html')
+
+    @app.route('/signup')
+    def signup():
+        return render_template('signup.html')
 
     return app
