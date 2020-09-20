@@ -19,3 +19,24 @@ It connects people who wish to motivate less sporty people, with couch-potatoes.
 ## How we built it
 
 The web app is powered by [Flask](https://flask.palletsprojects.com/en/1.1.x/). Tech stack we used include but not limit to: bootstrap css3, html5, javascript, jquery, opencv, posenet, python, sqlite, tensorflow;
+
+
+## Run the App
+
+1. Clone the project:
+```shell
+$ git clone https://github.com/Battleman/hackzurich2020.git
+```
+
+2. Activate virtual env:
+```shell
+$ cd hackzurich2020/
+$ source venv/bin/activate
+```
+
+3. Run Flask:
+```shell
+(venv) $ flask run
+```
+
+4. Open the link in local browser.
